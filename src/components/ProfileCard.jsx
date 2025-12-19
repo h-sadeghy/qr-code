@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 
 export default function ProfileCard() {
   return (
-    <div className="card w-full max-w-sm bg-base-300 shadow-xl">
+    <div className="card w-full max-w-sm bg-base-100 shadow-xl card-lg">
       <figure className="pt-4 pb-2">
         <div className="avatar">
           <div className="w-28 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4">
@@ -22,7 +22,7 @@ export default function ProfileCard() {
         </div>
       </figure>
 
-      <div className="card-body text-center gap-2 ">
+      <div className="card-body text-center gap-2 px-2">
         {/* Name */}
         <h1 className="text-xl font-extrabold text-primary ">
           <TypeWriterText text="Mohammad Mahdi Marvi" />
