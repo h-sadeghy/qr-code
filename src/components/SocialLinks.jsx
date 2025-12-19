@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import { messages } from "../assets/utils/Messages";
+import { messages } from "../assets/utils/messages";
 
 export default function SocialLinks() {
   return (
