@@ -10,7 +10,7 @@ export default function SocialLinks() {
         className="btn btn-outline flex items-center gap-3 btn-block justify-center text-center"
       >
         <lord-icon
-          src="/src/assets/whatsapp.json"
+          src="/lottie/whatsapp.json"
           trigger="loop"
           colors="primary:#22c55e"
           style={{ width: "32px", height: "32px" }}
@@ -24,7 +24,7 @@ export default function SocialLinks() {
         className="btn btn-outline flex items-center gap-3"
       >
         <lord-icon
-          src="/src/assets/instagram.json"
+          src="/lottie/instagram.json"
           trigger="loop"
           colors="primary:#22c55e"
           style={{ width: "32px", height: "32px" }}
@@ -38,7 +38,7 @@ export default function SocialLinks() {
         className="btn btn-outline flex items-center gap-3"
       >
         <lord-icon
-          src="/src/assets/telegram.json"
+          src="/lottie/telegram.json"
           trigger="loop"
           colors="primary:#22c55e"
           style={{ width: "32px", height: "32px" }}
@@ -52,7 +52,7 @@ export default function SocialLinks() {
         className="btn btn-outline flex items-center gap-3"
       >
         <lord-icon
-          src="/src/assets/sms.json"
+          src="/lottie/sms.json"
           trigger="loop"
           colors="primary:#22c55e"
           style={{ width: "32px", height: "32px" }}
