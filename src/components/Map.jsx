@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 export default function Map() {
-  const position = [36.31014735951382, 59.5040750683854]; // example: Tehran coordinates
+  const position = [36.31014735951382, 59.5040750683854];
 
   return (
     <MapContainer
@@ -15,9 +15,12 @@ export default function Map() {
         <Popup>
           کلینیک روان درمانی دکتر مروی
           <br />
-          <a href="tel:+985138888888" className="text-primary underline">
-            0513888888
-          </a>
+          هاشمیه ۳۴ و ۳۶ پلاک ۲۸۰
+          <br />
+          طبقه سوم
+          <br />
+          واحد ۵
+          <br />
         </Popup>
       </Marker>
     </MapContainer>

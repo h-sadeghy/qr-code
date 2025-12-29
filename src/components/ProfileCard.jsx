@@ -1,52 +1,42 @@
+import logo from "/logo2.jpeg";
 import { motion } from "framer-motion";
 import TypeWriterText from "./TypeWriterText";
-import avatar from "../assets/avatar.jpg";
 import SocialLinks from "./SocialLinks";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Fullscreen } from "lucide-react";
+
+import ReadMoreModal from "./ReadMoreModal";
 
 export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
   return (
-    <div className="card w-full max-w-md bg-base-100 shadow-xl card-lg ">
-      <figure className="pt-2 pb-2">
+    <div className="  w-full max-w-2xl card min-h-screen       shadow-xl      ">
+      <figure className="pt-2 pb-2 gap-4 flex flex-col">
         <div className="avatar ">
-          <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4 ">
+          <div className="w-24 rounded-full ring ring-gray-700 ring-offset-accent-content     ">
             <motion.div
               initial={{ opacity: 0, y: 8, filter: "blur(6px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               {/* avatar here */}
-              <img src={avatar} alt="Mohammad Mahdi Marvi" />
+              <img src={logo} alt="Mohammad Mahdi Marvi" />
             </motion.div>
           </div>
         </div>
+        <TypeWriterText
+          delay={0.4}
+          className=" text-white font-semibold tracking-[0.2rem]"
+          text="Mohammad Mahdi Marvi"
+        />
+        <div className="text-white text-center   ">
+          <h2>روانشناس بالینی , هیپنوتراپ</h2>
+
+          <p>عضو انجمن جهانی هیپنوتیزم</p>
+          <p>شماره پروانه تخصصی:29406</p>
+        </div>
       </figure>
 
-      <div className="card-body text-center gap-2 px-2">
+      <div className="card-body text-center   px-2 justify-end ">
         {/* Name */}
-        <h1 className=" text-xl tracking-[0.3rem] font-bold text-primary ">
-          <TypeWriterText text="Mohammad Mahdi Marvi" />
-        </h1>
-
-        {/* Main title (Persian) */}
-        <h2 className="text-md opacity-80 font-mono font-extrabold text-secondary">
-          <TypeWriterText
-            text="عضو انجمن علمی هیپنوتیزم بالینی ایران"
-            delay={0.2}
-          />
-        </h2>
-
-        <h2 className="text-sm opacity-80 font-mono text-primary  ">
-          <TypeWriterText text="عضو سازمان نظام روان‌شناسی ایران" delay={0.6} />
-        </h2>
-        <h2 className="text-sm opacity-80 font-mono text-primary  ">
-          <TypeWriterText text="عضو انجمن جهانی هیپنوتیزم" delay={0.2} />
-        </h2>
-
-        {/* Role */}
-        <p className="   font-mono text-xl font-bold text-primary">
-          <TypeWriterText text="روان‌درمانگر کودک و نوجوان" delay={1.2} />
-        </p>
 
         <SocialLinks />
 
@@ -57,7 +47,7 @@ export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
 
             setTimeout(scrollToMap, 50);
           }}
-          className="btn   w-full font-sans text-indigo-700  "
+          className="btn bg-transparent   w-full  text-white  "
         >
           <ChevronDown
             className={`${!showMap ? "animate-bounce" : ""}  `}

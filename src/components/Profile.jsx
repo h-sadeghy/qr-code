@@ -1,9 +1,8 @@
 import { useRef, useState } from "react";
 import Map from "./Map";
 import ProfileCard from "./ProfileCard";
-import ThemeToggle from "./ThemeToggle";
 import { ChevronUp } from "lucide-react";
-import BottomMenu from "./BottomMenu";
+
 export default function Profile() {
   const mapRef = useRef(null);
   const [showMap, setShowMap] = useState(false);
@@ -16,7 +15,10 @@ export default function Profile() {
   return (
     <div
       ref={topRef}
-      className="min-h-screen bg-base-300 flex items-center justify-center p-4  gap-4 flex-col"
+      style={{
+        backgroundImage: "URL(/bg.jpeg)",
+      }}
+      className="min-h-screen bg-cover bg-center w-full mx-auto   flex items-center justify-center       gap-4 flex-col font-serif "
     >
       <ProfileCard
         showMap={showMap}
@@ -29,12 +31,12 @@ export default function Profile() {
             <button
               onClick={() => {
                 topRef.current?.scrollIntoView({ behavior: "smooth" });
-                setTimeout(() => setShowMap(false), 400);
+                setTimeout(() => setShowMap(false), 200);
               }}
-              className="btn btn-ghost flex items-center justify-center gap-2"
+              className="flex items-center text-primary-content  btn bg-transparent  justify-center gap-1 "
             >
               <ChevronUp className="animate-bounce" size={18} />
-              بازگشت
+              Close
             </button>
 
             <Map />

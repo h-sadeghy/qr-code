@@ -1,64 +1,58 @@
-import { Instagram } from "lucide-react";
 import { messages } from "../assets/utils/messages";
+import { useState } from "react";
+import ReadMoreSidebar from "./ReadMoreModal";
+const text = `    روان‌شناس بالینی نوجوان ، هیپنوتراپ متخصص اضطراب و استرس کودکان
+                روان شناس و مشاور رسمی آموزش و پرورش برای والدینی که رشد و
+                آرامش واقعی فرزندشان برایشان اهمیت دارد با بیش از یک دهه تجربه
+                بالینی و پژوهشی، در کنار والدین هستم تا فرزندانشان:
+                 • اضطراب و
+                استرس کمتری را تجربه کنند • اعتماد به نفس و مهارت‌های
+                اجتماعی‌شان تقویت شود • در خانواده‌ای سالم و پر از اعتماد رشد
+                کنند برخی از تجربیات و دستاوردهای حرفه‌ای: • نگارش و چاپ بیش از
+                ۱۰ مقاله بین‌المللی در حوزه اضطراب و افسردگی نوجوانان (انگلستان،
+                آلمان، استرالیا، ایتالیا، بلژیک، هلند) • کسب عنوان مقاله برتر در
+                سومین کنفرانس علوم ورزشی و پژوهش‌های نوین روان‌شناسی،
+                انگلستان،لندن • برگزاری بیش از ۵۰ کارگاه آموزشی فرزندپروری و
+                مشاوره والدین • مدرس و روان‌درمانگر اولین دوره نوروکمپ در ایران،
+                دانشگاه فردوسی مشهد • گذراندن دوره بین المللی هیپنوتیزم بالینی
+                ،آلمان 💡 این دانش و تجربه بین‌المللی، همراه با رویکرد عملی و
+                علمی، مسیر رشد، آرامش و موفقیت کودک شما را هموار می‌کند
+            `;
 
 export default function SocialLinks() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <div className="mt-8 grid grid-rows-2 grid-cols-2 gap-1">
-      <a
-        href={`https://wa.me/989362924812?text=${messages.whatsapp}`}
-        rel="noopener noreferrer"
-        className="btn  flex items-center gap-3 btn-block justify-center text-center "
-      >
-        <lord-icon
-          src="/lottie/whatsapp.json"
-          trigger="loop"
-          colors="primary:#22c55e"
-          style={{ width: "32px", height: "32px" }}
-        />
-        <span className="font-sans text-primary">WhatsApp</span>
-      </a>
-      <a
-        target="_blank"
-        href="https://www.instagram.com/mahdi_marvi14"
-        rel="noopener noreferrer"
-        className="btn  flex items-center gap-3 justify-center"
-      >
-        <lord-icon
-          src="/lottie/instagram.json"
-          trigger="loop"
-          colors="primary:#22c55e"
-          style={{ width: "32px", height: "32px" }}
-        />
-        <span className="font-sans text-primary">Instagram</span>
-      </a>
-      <a
-        href={`https://t.me/your_username?text=${messages.telegram}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn  flex items-center gap-3 justify-center"
-      >
-        <lord-icon
-          src="/lottie/telegram.json"
-          trigger="loop"
-          colors="primary:#22c55e"
-          style={{ width: "32px", height: "32px" }}
-        />
-        <span className="font-sans text-primary ">Telegram</span>
-      </a>
-      <a
-        href={`sms:+989362924128?body=${messages.sms}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn  flex items-center gap-3 justify-center-safe"
-      >
-        <lord-icon
-          src="/lottie/sms.json"
-          trigger="loop"
-          colors="primary:#22c55e"
-          style={{ width: "32px", height: "32px" }}
-        />
-        <span className="font-sans text-primary justify-between">Send SMS</span>
-      </a>
-    </div>
+    <>
+      <div className=" flex flex-col gap-1">
+        <div className="grid  w-full">
+          <ReadMoreSidebar
+            text={text}
+            open={showModal}
+            onClose={() => setShowModal(false)}
+          />
+        </div>
+        <div className="grid-cols-1 grid gap-1">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/mahdi_marvi14"
+            rel="noopener noreferrer"
+            className="btn  bg-transparent flex items-center   "
+          >
+            <span className="text-primary-content pl-0.5">INSTAGRAM</span>
+          </a>
+          <a
+            href={`https://t.me/mahdi_mrv?text=${messages.telegram}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn bg-transparent    flex items-center  px-4 justify-center"
+          >
+            <span className=" text-primary-content  tracking-widest ">
+              TELEGRAM
+            </span>
+          </a>
+        </div>
+      </div>
+    </>
   );
 }
