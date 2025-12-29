@@ -9,7 +9,7 @@ import ReadMoreModal from "./ReadMoreModal";
 export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
   return (
     <div className="  w-full max-w-2xl card min-h-screen       shadow-xl      ">
-      <figure className="pt-2 pb-2 gap-4 flex flex-col">
+      <figure className="pt-4 pb-2 gap-4 flex flex-col">
         <div className="avatar ">
           <div className="w-24 rounded-full ring ring-gray-700 ring-offset-accent-content     ">
             <motion.div
