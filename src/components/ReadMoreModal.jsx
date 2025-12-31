@@ -11,7 +11,7 @@ export default function ReadMoreSidebar({ text }) {
       <div className="">
         <button
           onClick={() => setOpen(true)}
-          className="  w-xs rounded-2xl  text-white items-center       btn bg-transparent   flex mx-auto  "
+          className="  w-2xs rounded-2xl  text-white items-center       btn bg-transparent   flex mx-auto  "
         >
           <span className="pr-2 items-center justify-around  ">
             <UserRound />

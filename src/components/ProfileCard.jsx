@@ -1,4 +1,4 @@
-import avatar from "/avatar3.jpeg";
+import logo from "/logo.jpeg";
 import { motion } from "framer-motion";
 import TypeWriterText from "./TypeWriterText";
 import SocialLinks from "./SocialLinks";
@@ -19,9 +19,9 @@ export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
             >
               {/* avatar here */}
               <img
-                src={avatar}
+                src={logo}
                 alt="Mohammad Mahdi Marvi"
-                className="w-full h-full bg-black/20  "
+                className="w-full    "
               />
             </motion.div>
           </div>
@@ -64,7 +64,7 @@ export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
 
             setTimeout(scrollToMap, 50);
           }}
-          className="btn bg-transparent  items-center   w-xs rounded-2xl mx-auto  text-white  "
+          className="btn bg-transparent  items-center   w-2xs rounded-2xl mx-auto  text-white  "
         >
           <MapPin />
           <span className="flex items-center pl-2 ">Location</span>

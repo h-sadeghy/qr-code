@@ -25,7 +25,7 @@ export default function SocialLinks() {
 
   return (
     <>
-      <div className=" flex flex-col gap-1">
+      <div className=" flex flex-col gap-1 ">
         <div className="grid  w-full">
           <ReadMoreSidebar
             text={text}
@@ -38,7 +38,7 @@ export default function SocialLinks() {
             target="_blank"
             href="https://www.instagram.com/mahdi_marvi14"
             rel="noopener noreferrer"
-            className="btn rounded-2xl w-xs justify-center  bg-transparent flex items-center  text-primary-content "
+            className="btn rounded-2xl w-2xs justify-center  bg-transparent flex items-center  text-primary-content "
           >
             <span className="  flex items-center  ">
               <Instagram />
@@ -49,7 +49,7 @@ export default function SocialLinks() {
             href={`https://t.me/mahdi_mrv?text=${messages.telegram}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn rounded-2xl w-xs justify-center  bg-transparent flex items-center  text-primary-content "
+            className="btn rounded-2xl w-2xs justify-center  bg-transparent flex items-center  text-primary-content "
           >
             <span className="items-center flex      ">
               <Send />

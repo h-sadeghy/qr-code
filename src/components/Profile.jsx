@@ -18,7 +18,7 @@ export default function Profile() {
       style={{
         backgroundImage: "URL(/bg.jpeg)",
       }}
-      className="min-h-screen bg-cover bg-center w-full mx-auto   flex items-center justify-center       gap-4 flex-col font-mono "
+      className="min-h-screen  w-full  mx-auto   flex items-center justify-center     overflow-x-hidden  gap-4 flex-col font-mono "
     >
       <ProfileCard
         showMap={showMap}
@@ -33,7 +33,7 @@ export default function Profile() {
                 topRef.current?.scrollIntoView({ behavior: "smooth" });
                 setTimeout(() => setShowMap(false), 200);
               }}
-              className="flex items-center text-primary-content  btn bg-transparent  justify-center gap-1 w-xs rounded-2xl mx-auto "
+              className="flex items-center text-primary-content  btn bg-transparent  justify-center gap-1 w-2xs rounded-2xl mx-auto "
             >
               <ChevronUp className="animate-bounce" size={18} />
               Close
