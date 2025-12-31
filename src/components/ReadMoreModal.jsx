@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GraduationCap, X } from "lucide-react";
+import { GraduationCap, UserRound, X } from "lucide-react";
 
 export default function ReadMoreSidebar({ text }) {
   const [open, setOpen] = useState(false);
@@ -11,9 +11,12 @@ export default function ReadMoreSidebar({ text }) {
       <div className="">
         <button
           onClick={() => setOpen(true)}
-          className="  w-full  text-white     p-2 btn bg-transparent "
+          className="  w-xs rounded-2xl  text-white items-center       btn bg-transparent   flex mx-auto  "
         >
-          RESUME
+          <span className="pr-2 items-center justify-around  ">
+            <UserRound />
+          </span>
+          <span className="tracking-widest">Resume</span>
         </button>
       </div>
 

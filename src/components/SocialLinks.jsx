@@ -1,6 +1,7 @@
 import { messages } from "../assets/utils/messages";
 import { useState } from "react";
 import ReadMoreSidebar from "./ReadMoreModal";
+import { Instagram, Send } from "lucide-react";
 const text = `    روان‌شناس بالینی نوجوان ، هیپنوتراپ متخصص اضطراب و استرس کودکان
                 روان شناس و مشاور رسمی آموزش و پرورش برای والدینی که رشد و
                 آرامش واقعی فرزندشان برایشان اهمیت دارد با بیش از یک دهه تجربه
@@ -32,23 +33,27 @@ export default function SocialLinks() {
             onClose={() => setShowModal(false)}
           />
         </div>
-        <div className="grid-cols-1 grid gap-1">
+        <div className="flex flex-col gap-1 justify-center mx-auto ">
           <a
             target="_blank"
             href="https://www.instagram.com/mahdi_marvi14"
             rel="noopener noreferrer"
-            className="btn  bg-transparent flex items-center   "
+            className="btn rounded-2xl w-xs justify-center  bg-transparent flex items-center  text-primary-content "
           >
-            <span className="text-primary-content pl-0.5">INSTAGRAM</span>
+            <span className="  flex items-center  ">
+              <Instagram />
+            </span>
+            <span className="">Instagram</span>
           </a>
           <a
             href={`https://t.me/mahdi_mrv?text=${messages.telegram}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn bg-transparent    flex items-center  px-4 justify-center"
+            className="btn rounded-2xl w-xs justify-center  bg-transparent flex items-center  text-primary-content "
           >
-            <span className=" text-primary-content  tracking-widest ">
-              TELEGRAM
+            <span className="items-center flex      ">
+              <Send />
+              <span className="pl-2 tracking-wider">Telegram</span>
             </span>
           </a>
         </div>
