@@ -26,21 +26,24 @@ export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
             </motion.div>
           </div>
         </div>
-        <span
+
+        <motion.h1
           dir="rtl"
-          style={{
-            unicodeBidi: "isolate",
-            direction: "rtl",
-            textRendering: "optimizeLegibility",
-          }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-2xl font-extrabold text-white text-shadow-lg/40 "
         >
-          <TypeWriterText
-            dir="rtl"
-            delay={0.4}
-            className=" text-white font-extrabold   text-2xl  text-shadow-lg/40"
-            text="محمد مهدی مروی"
-          />
-        </span>
+          محمد مهدی مروی
+        </motion.h1>
+
+        {/* <TypeWriterText
+          dir="rtl"
+          delay={0.4}
+          className=" text-white font-extrabold   text-2xl  text-shadow-lg/40"
+          text="محمد مهدی مروی"
+        /> */}
+
         <div className="text-white text-center font-bold text-shadow-lg/40 ">
           <h2>روانشناس بالینی | هیپنوتراپ</h2>
 
