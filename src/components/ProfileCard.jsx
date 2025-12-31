@@ -26,11 +26,13 @@ export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
             </motion.div>
           </div>
         </div>
-        <TypeWriterText
-          delay={0.4}
-          className=" text-white font-extrabold   text-2xl  text-shadow-lg/40"
-          text="محمد مهدی مروی"
-        />
+        <span dir="rtl" style={{ unicodeBidi: "isolate" }}>
+          <TypeWriterText
+            delay={0.4}
+            className=" text-white font-extrabold   text-2xl  text-shadow-lg/40"
+            text="محمد مهدی مروی"
+          />
+        </span>
         <div className="text-white text-center font-bold text-shadow-lg/40 ">
           <h2>روانشناس بالینی | هیپنوتراپ</h2>
 
