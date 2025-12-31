@@ -26,8 +26,16 @@ export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
             </motion.div>
           </div>
         </div>
-        <span dir="rtl" style={{ unicodeBidi: "isolate" }}>
+        <span
+          dir="rtl"
+          style={{
+            unicodeBidi: "isolate",
+            direction: "rtl",
+            textRendering: "optimizeLegibility",
+          }}
+        >
           <TypeWriterText
+            dir="rtl"
             delay={0.4}
             className=" text-white font-extrabold   text-2xl  text-shadow-lg/40"
             text="محمد مهدی مروی"
