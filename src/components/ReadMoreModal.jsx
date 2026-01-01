@@ -31,7 +31,7 @@ export default function ReadMoreSidebar({ text }) {
             onClick={() => setOpen(false)} // click outside to close
           >
             <motion.div
-              className="fixed  top-0 right-0 h-full w-82 bg-gray-100 shadow-xl overflow-auto px-2 py-4 rounded-tl-2xl rounded-bl-2xl  "
+              className="fixed  top-0 right-0 h-full w-3/4 bg-gray-100 shadow-xl overflow-auto px-2 py-4 rounded-tl-2xl rounded-bl-2xl  "
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}

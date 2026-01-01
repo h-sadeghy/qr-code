@@ -5,9 +5,14 @@ export default function Map() {
 
   return (
     <MapContainer
+      className="mb-2"
       center={position}
       zoom={15}
-      style={{ height: "250px", width: "100%", borderRadius: "12px" }}
+      style={{
+        height: "250px",
+        width: "100%",
+        borderRadius: "12px",
+      }}
       scrollWheelZoom={false}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
