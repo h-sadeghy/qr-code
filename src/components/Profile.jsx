@@ -16,9 +16,10 @@ export default function Profile() {
     <div
       ref={topRef}
       style={{
-        backgroundImage: "URL(/bg.jpeg)",
+        backgroundImage: "URL(/bg2.jpeg)",
+        backgroundAttachment: "fixed",
       }}
-      className="min-h-screen  w-full  mx-auto   flex items-center justify-center     overflow-x-hidden  gap-4 flex-col font-mono "
+      className="min-h-screen  w-full  mx-auto   flex items-center justify-center  bg-center bg-cover   overflow-x-hidden  gap-4 flex-col font-mono "
     >
       <ProfileCard
         showMap={showMap}

@@ -1,6 +1,5 @@
-import logo from "/logo.jpeg";
+import avatar from "/avatar3.jpeg";
 import { motion } from "framer-motion";
-import TypeWriterText from "./TypeWriterText";
 import SocialLinks from "./SocialLinks";
 import { ChevronDown, Fullscreen, MapPin } from "lucide-react";
 
@@ -19,7 +18,7 @@ export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
             >
               {/* avatar here */}
               <img
-                src={logo}
+                src={avatar}
                 alt="Mohammad Mahdi Marvi"
                 className="w-full    "
               />
@@ -37,22 +36,12 @@ export default function ProfileCard({ scrollToMap, setShowMap, showMap }) {
           محمد مهدی مروی
         </motion.h1>
 
-        {/* <TypeWriterText
-          dir="rtl"
-          delay={0.4}
-          className=" text-white font-extrabold   text-2xl  text-shadow-lg/40"
-          text="محمد مهدی مروی"
-        /> */}
-
         <div className="text-white text-center font-bold text-shadow-lg/40 ">
           <h2>روانشناس بالینی | هیپنوتراپ</h2>
-
-          {/* <p>عضو انجمن جهانی هیپنوتیزم</p>
-          <p>شماره پروانه تخصصی:29406</p> */}
         </div>
       </figure>
 
-      <div className="card-body text-center   px-2 justify-end  ">
+      <div className="card-body text-center   px-2 justify-end">
         {/* Name */}
 
         <SocialLinks />
