@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GraduationCap, UserRound, X } from "lucide-react";
 
 export default function ReadMoreSidebar({ text }) {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <>
@@ -48,7 +59,11 @@ export default function ReadMoreSidebar({ text }) {
                 dir="rtl"
                 className="leading-8 font-serif text-right font-normal text-md "
               >
-                روان‌شناس بالینی نوجوان ، هیپنوتراپ متخصص اضطراب و استرس کودکان
+                <span className="font-bold">
+                  روان‌شناس بالینی نوجوان ، هیپنوتراپ , متخصص اضطراب و استرس
+                  کودکان
+                </span>
+                <br />
                 روان شناس و مشاور رسمی آموزش و پرورش برای والدینی که رشد و آرامش
                 واقعی فرزندشان برایشان اهمیت دارد با بیش از یک دهه تجربه بالینی
                 و پژوهشی، در کنار والدین هستم تا فرزندانشان:

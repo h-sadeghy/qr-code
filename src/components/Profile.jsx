@@ -36,8 +36,8 @@ export default function Profile() {
               }}
               className="flex items-center text-primary-content  btn bg-transparent  justify-center gap-1 w-2xs rounded-2xl mx-auto "
             >
-              <ChevronUp className="animate-bounce" size={18} />
-              Close
+              <ChevronUp className="animate-bounce " size={18} />
+              Click to Close Map
             </button>
 
             <Map />
