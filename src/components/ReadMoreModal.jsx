@@ -4,6 +4,13 @@ import { GraduationCap, UserRound, X } from "lucide-react";
 
 export default function ReadMoreSidebar({ text }) {
   const [open, setOpen] = useState(false);
+  const closeSidebar = () => {
+    setOpen(false);
+    if (window.history.state?.sidebar) {
+      window.history.back();
+    }
+  };
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -13,6 +20,22 @@ export default function ReadMoreSidebar({ text }) {
 
     return () => {
       document.body.style.overflow = "";
+    };
+  }, [open]);
+  useEffect(() => {
+    if (!open) return;
+
+    // push a new history entry when modal opens
+    window.history.pushState({ sidebar: true }, "");
+
+    const handlePopState = () => {
+      setOpen(false);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
     };
   }, [open]);
 
@@ -39,7 +62,7 @@ export default function ReadMoreSidebar({ text }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setOpen(false)} // click outside to close
+            onClick={closeSidebar} // click outside to close
           >
             <motion.div
               className="fixed  top-0 right-0 h-full w-3/4 bg-gray-100 shadow-xl overflow-auto px-2 py-4 rounded-tl-2xl rounded-bl-2xl  "
@@ -51,7 +74,7 @@ export default function ReadMoreSidebar({ text }) {
             >
               <button
                 onClick={() => setOpen(false)}
-                className="text-blue-600 rounded-full border-2 cursor-pointer font-bold mb-4 hover:underline"
+                className="text-blue-600 rounded-full  border-2 cursor-pointer font-bold mb-4 hover:underline"
               >
                 <X />
               </button>
